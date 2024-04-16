@@ -35,3 +35,13 @@ export default function Cadastro(){
     )
 }
 
+const styles = StyleSheet.create({
+    container:{
+        alignItems: 'center',
+        marginTop: 20,
+        gap: 30,
+        
+    },
+
+
+})
