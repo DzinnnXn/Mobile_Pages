@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, StyleSheet, ActivityIndicator, Image } from 'react-native';
 
-function Loading() {
+function Load() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -36,4 +36,4 @@ function Loading() {
   );
 }
 
-export default Loading;
+export default Load;
