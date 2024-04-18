@@ -37,7 +37,7 @@ export default function Login(){
         </TouchableOpacity>
         </Link>
 
-        <Link href="telasIniciais/recuperar" asChild>
+        <Link href="telasIniciais/RecuperarSenha" asChild>
             <TouchableOpacity>
             <Text style={styles.texto2}>Esqueceu a senha?</Text>
             </TouchableOpacity>
