@@ -1,27 +1,27 @@
 import { Tabs } from "expo-router";
-import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-export default function layout(){
-    return(
-        <Tabs screenOptions={{tabBarShowLabel: false}}>
-            <Tabs.Screen name="scanner" options={{
+
+export default function layout() {
+    return (
+        <Tabs screenOptions={{tabBarShowLabel: false,}} >
+            <Tabs.Screen name="Scanner" options={{
                 headerShown: false,
-                tabBarIcon: ({color,size}) => (
-                    <AntDesign name="camera" size={size} color={color} />
-                )
+                tabBarIcon: ({color, size}) => (
+                    <MaterialCommunityIcons name="camera-flip" size={size} color={color}/>
+                ),
             }} />
 
-
-            <Tabs.Screen name="DrawerNav" options={{ 
+            <Tabs.Screen name="DrawerNav" options={{
                 headerShown: false,
-                tabBarStyle:{
-                    backgroundColor: "#ff0000"
+                tabBarStyle: {
+                    backgroundColor: 'red',
                 },
-                tabBarIcon: ({color,size}) => (
-                    <MaterialCommunityIcons name="format-list-bulleted" size={size} color={color} />
+                tabBarIcon: ({color, size}) => (
+                    <MaterialCommunityIcons name="format-list-numbered" size={size} color={color}/>
                 ),
-                tabBarInactiveTintColor: "#fff"
-            }}/>
+                tabBarInactiveTintColor: "#fff",
+            }} />
+
         </Tabs>
     )
 }
