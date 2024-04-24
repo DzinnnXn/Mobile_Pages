@@ -1,47 +1,48 @@
-import { StyleSheet, View, Text } from "react-native";
-import Header from "@comp/header";
-import Input from "@comp/input";
-import LinkBtn from "@comp/button";
-import { useColor } from "../../temas/Temas";
+import React from 'react';
+import { View, StyleSheet, ScrollView} from 'react-native';
+import Status from '@comp/StatusBar';
+import Inputs from '@comp/Input';
+import { useColor } from '../../temas/temas';
+import LinkBtn from '@comp/Linkbtn';
 
-export default function Cadastro(){
+const Cadastro = () => {
+  const cores = useColor();
 
-    const styles = StyleSheet.create({
-        btnAdd: {
-            position: "absolute",
-            bottom: 30,
-            right: 30
-        }
-    })
-    return(
-        <>
-        <View>
-        <Header cor="#FF0000" texto="Cadastre-se"/>
+  return (
+    <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
+      <Status title="Cadastre-se"/>
+      <ScrollView contentContainerStyle={styles.cadastro}>
+
+        <View style={[styles.inputs, {backgroundColor: cores.bgPrimary}]}>
+          <Inputs placeholder="Insira seu nome" title="Nome:"/>
+          <Inputs placeholder="Insira seu sobrenome" title="Sobrenome:" />
+          <Inputs placeholder="Insira seu email" title="E-mail:"/>
+          <Inputs placeholder="Insira seu telefone" title="Telefone"/>
+          <Inputs placeholder="Insira sua senha" secureTextEntry title="Senha:"/>
+          <Inputs placeholder="Confirme sua senha" secureTextEntry title="Confirmar senha:"/>
+          <LinkBtn title="Entrar" href="TelasIniciais/Login" />
         </View>
 
-        <View style={styles.container}>
-        <Input nome="Nome:" placeholder="Insira o seu nome:"/>
-        <Input nome="Sobrenome:" placeholder="Insira o seu sobrenome:"/>
-        <Input nome="Email:" placeholder="Insira o seu telefone:"/>
-        <Input nome="Senha:" placeholder="Insira a sua senha:"/>
-        <Input nome="Senha:" placeholder="Insira a sua senha:" secureTextEntry={true} />
-        <LinkBtn title="Cadastre-se" href="TabNav" />
-        </View>
-
-
-
-        
-        </>
-    )
-}
+      </ScrollView>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-    container:{
-        alignItems: 'center',
-        marginTop: 20,
-        gap: 30,
-        
-    },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  cadastro: {
+    flexGrow: 1,
+  },
+  inputs: {
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingBottom: 20,
+    height: '100%',
+    width: '100%',
+  },
+});
 
-
-})
+export default Cadastro;
