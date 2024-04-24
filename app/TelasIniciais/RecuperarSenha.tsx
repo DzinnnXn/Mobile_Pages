@@ -1,43 +1,49 @@
-import { StyleSheet, View, Text } from "react-native";
-import Header from "@comp/header";
-import Input from "@comp/input";
-import LinkBtn from "@comp/button";
+import { View, StyleSheet, Text } from 'react-native';
+import Status from '@comp/StatusBar';
+import Inputs from '@comp/Input';
+import { useColor } from '../../temas/temas';
+import LinkBtn from '@comp/Linkbtn';
 
-export default function RecuperarSenha(){
-    return(
-        <>
-        <View>
-        <Header cor="#011E83" texto="Recuperação de Senha"/> 
+const RecuperarSenha = () => {
+    const BotaoPress = () => {
+        alert('E-mail enviado com sucesso! Aguarde para a recuperação da senha!');
+    };
+
+    const cores = useColor();
+
+    console.log(cores);
+    
+    return (
+        <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
+            <Status title="Recuperação de senha" />
+            <View style={[styles.cadastro, {backgroundColor: cores.bgPrimary}]}>
+                <Text style={[styles.texto, {color: cores.textColorPrimary}]}>Insira seu e-mail para recuperar a senha!</Text>
+                <Inputs placeholder="insira seu email:" title="E-mail:"/>
+                <LinkBtn title="Entrar" href="TelasIniciais/Login" />
+            </View>
         </View>
-
-        <View style={styles.container}>
-        <Text style={styles.texto} >Insira o seu e-mail para recuperar a sua senha!</Text>
-        <Input nome="Email:" placeholder="Insira o seu email:"/>
-        <LinkBtn title="Prosseguir" href="" />
-
-
-        </View>
-
-        </>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
+        flex: 1,
         alignItems: 'center',
-        marginTop: 50,
-        gap: 20,
-        
+        justifyContent: 'center',
     },
-
-    texto:{
-
-        marginBottom: 30,
-        fontSize: 18,
-        fontWeight: '500',
-        maxWidth: 300,
+    cadastro: {
+        flex: 1,
+        width: '100%',
+        padding: 10,
+        alignItems: 'center',
+    },
+    texto: {
         textAlign: 'center',
-
+        fontSize: 20,
+        width: '70%',
+        margin: 20,
     },
-    
-})
+
+});
+
+export default RecuperarSenha;
