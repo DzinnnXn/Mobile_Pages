@@ -1,39 +1,31 @@
-
 import React from 'react';
-import { View, StyleSheet, ActivityIndicator, Image } from 'react-native';
+import { View, StyleSheet} from 'react-native';
+import Status from '@comp/StatusBar';
+import { ActivityIndicator } from 'react-native';
+import { useColor } from '../../temas/temas';
 
-function Load() {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'red',
-    },
-    background: {
-      backgroundColor: 'red',
-      padding: 20,
-      borderRadius: 10,
-      alignItems: 'center',
-    },
-    logo: {
-      width: 200,
-      height: 51,
-      marginBottom: 20,
-    },
-    loader: {
-      marginTop: 20,
-    },
-  });
-  
+const Load = () => {
+  const cores = useColor();
+
   return (
-    <View style={styles.container}>
-      <View style={styles.background}>
-        <Image source={require('@assets/Logo.png')} style={styles.logo} />
-        <ActivityIndicator size="large" color="#fff" style={styles.loader} />
-      </View>
+    <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
+      <Status title={''} />
+      <ActivityIndicator size={60} color="#ffff" style={styles.circle}  />
+
     </View>
+    
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  circle: {
+    marginTop: -60,  
+  },
+});
 
 export default Load;
