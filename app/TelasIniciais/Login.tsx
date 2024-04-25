@@ -3,7 +3,7 @@ import { View, StyleSheet, Text } from 'react-native';
 import { Link } from 'expo-router';
 import Status from '@comp/StatusBar';
 import Inputs from '@comp/Input';
-import LinkBtn from '@comp/Linkbtn';
+import LinkBtn from '@comp/LinkButton';
 import { useColor } from '../../temas/temas';
 
 const Login = () => {
