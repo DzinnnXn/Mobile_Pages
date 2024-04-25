@@ -2,7 +2,7 @@ import { View, StyleSheet, Text } from 'react-native';
 import Status from '@comp/StatusBar';
 import Inputs from '@comp/Input';
 import { useColor } from '../../temas/temas';
-import LinkBtn from '@comp/Linkbtn';
+import LinkBtn from '@comp/LinkButton';
 
 const RecuperarSenha = () => {
     const BotaoPress = () => {
