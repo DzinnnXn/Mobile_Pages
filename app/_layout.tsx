@@ -10,7 +10,7 @@ export default function layout() {
         statusBarColor: "black" }} />
       
     {/* Esta e a Tela de Recuperação de Senha */}
-      <Stack.Screen name="TelasIniciais/RecuperarSenha" options={{
+      <Stack.Screen name="TelasIniciais/RecupSenha" options={{
         headerTitle: "" ,
         statusBarColor: "#011E83",
         headerTintColor: "#fff", 
