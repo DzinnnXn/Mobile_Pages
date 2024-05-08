@@ -1,10 +1,10 @@
 import { View, StyleSheet, Text } from 'react-native';
 import Status from '@comp/StatusBar';
 import Inputs from '@comp/Input';
-import { useColor } from '../../temas/temas';
+import { useColor } from '../../temas/Temas';
 import LinkBtn from '@comp/LinkButton';
 
-const RecuperarSenha = () => {
+const RecupSenha = () => {
     const BotaoPress = () => {
         alert('E-mail enviado com sucesso! Aguarde para a recuperação da senha!');
     };
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default RecuperarSenha;
+export default RecupSenha;
