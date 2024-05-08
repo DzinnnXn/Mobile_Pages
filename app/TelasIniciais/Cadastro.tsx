@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, ScrollView} from 'react-native';
 import Status from '@comp/StatusBar';
 import Inputs from '@comp/Input';
-import { useColor } from '../../temas/temas';
+import { useColor } from '../../temas/Temas';
 import LinkBtn from '@comp/LinkButton';
 
 const Cadastro = () => {
