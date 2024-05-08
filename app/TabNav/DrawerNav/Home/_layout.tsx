@@ -1,6 +1,6 @@
 import { DrawerToggleButton } from "@react-navigation/drawer";
 import { Stack } from "expo-router";
-import { useColor } from "../../../../temas/temas";
+import { useColor } from "../../../../temas/Temas";
 
 export default function layout() {
     const cores = useColor();
