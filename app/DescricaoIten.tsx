@@ -8,20 +8,20 @@ const Descricao = () => {
     return(
         <View style={styles.container}>
             <View style={styles.corpo}>
-                <Text style={styles.titulo}>N° do Inventario:</Text>
+                <Text style={styles.tittle}>N° do Inventario:</Text>
                 <Text style={styles.item}> 957689 </Text>
-                <Text style={styles.titulo}>Descrição:</Text>
+                <Text style={styles.tittle}>Descrição:</Text>
                 <Text style={styles.item}> CADEIRA GIRATÓRIA </Text>
-                <Text style={styles.titulo}>Local:</Text>
+                <Text style={styles.tittle}>Local:</Text>
                 <Text style={styles.item}> SALA C13 </Text>
-                <Text style={styles.titulo}>Responsável:</Text>
-                <Text style={styles.item}> CARLOS </Text>
-                <Text style={styles.titulo}>Data de Registro:</Text>
+                <Text style={styles.tittle}>Responsável:</Text>
+                <Text style={styles.item}> THIAGO </Text>
+                <Text style={styles.tittle}>Data de Registro:</Text>
                 <Text style={styles.item}> 05/03/2024 </Text>
             </View>
 
-            <View style={styles.addButtonContainer}>
-                <Link href="/Editar" asChild>
+            <View style={styles.addButton}>
+                <Link href="./Editar" asChild>
                     <MaterialCommunityIcons name="pencil-circle" size={60} color="red" />
                 </Link>
             </View>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 50,
     },
-    addButtonContainer: {
+    addButton: {
         position: "absolute",
         bottom: 20,
         right: 0,
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         marginBottom: 50,
         height: 60,
     },
-    titulo : {
+    tittle : {
         fontSize: 20,
         fontWeight: '500',
         color: 'black',
