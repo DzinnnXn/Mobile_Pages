@@ -1,9 +1,9 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
-import PatriBar from "@comp/PatrimonioBar";
+import PatriBar from "@comp/Patrimonios";
 import {AntDesign, MaterialIcons } from '@expo/vector-icons';
 import Footbar from "@comp/Footer";
-import InputinventoryInput from "@comp/Inputitens";
+import InputinventoryInput from "@comp/Input2";
 import { Link } from "expo-router";
 
 const Editar = () => {
@@ -11,7 +11,7 @@ const Editar = () => {
         <View style={styles.container}>
             <PatriBar color="red">
                 <TouchableOpacity>
-                    <Link href="/DescricaoIten" asChild>
+                    <Link href="/DescricaoItem" asChild>
                         <AntDesign name="arrowleft" size={25} color="#ffff" />
                     </Link>
                 </TouchableOpacity>
