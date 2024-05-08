@@ -43,8 +43,8 @@ export default function CustomDrawer(props: any){
             <View style={[styles.container0, {backgroundColor: cores.bgPrimary}]}>
                 <FontAwesome5 name="user-circle" size={80} color={cores.textColorPrimaryVariant} />
                 <View style={styles.Info}>
-                    <Text style={styles.tittle}>Enzo Biason</Text>
-                    <Text style={styles.text}>enzo@gmail.com</Text>
+                    <Text style={styles.tittle}>Andre Silva</Text>
+                    <Text style={styles.text}>andre@gmail.com</Text>
                 </View>
             </View>
             <DrawerItemList {...props}/>
